@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get width and height of window after resizing</title>
+</head>
+<body onload="getSize()" onresize="getSize()">
+    <div id="swh">
+    </div>
+    
+    <script>
+        function getSize()
+        {
+            var width = document.documentElement.clientWidth;
+            var height = document.documentElement.clientHeight;
+        
+            // put the result into a h1 tag
+            document.getElementById('swh').innerHTML = "<h1>" + width + " * " + height + "</h1>";
+        }
+    </script>
+</body>
+</html>

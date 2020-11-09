@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCM of two numbers</title>
+</head>
+
+<body>
+    <script>
+        const lcm = (a, b) => {
+            let min = Math.min(a, b);
+            while (min >= 2) {
+                if (a % min === 0 && b % min === 0) {
+                    return (a * b) / min;
+                };
+                min--;
+            };
+            return (a * b);
+        };
+        console.log(lcm(6, 8));
+        console.log(lcm(16, 18));
+    </script>
+</body>
+
+</html>
